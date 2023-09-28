@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
 import java.util.Scanner;
 
-/**
- *
- * @author mactu
- */
 public class Validation {
     private static final Scanner sc = new Scanner(System.in);
     public String inputString(String msg){

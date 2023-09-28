@@ -1,24 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controller;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Scanner;
 import model.Fruit;
 
-/**
- *
- * @author mactu
- */
 public class ManageFruitShop {
     private List<Fruit> listFruit;
     
     Hashtable <String,List<Fruit>> hashTable; 
     Validation vl = new Validation();
+     public void run() {
+        Scanner sc = new Scanner(System.in);
+        boolean exit = false;
+        
+        while (!exit) {
+            System.out.println("1. Create fruit");
+            System.out.println("2. View order");
+            System.out.println("3. Shopping");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+            
+            switch (choice) {
+                case 1:
+                    createProduct();
+                    break;
+                case 2:
+                    viewOrders();
+                    break;
+                case 3:
+                    shopping();
+                    break;
+                case 4:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please choose again.");
+            }
+        }
+        
+        sc.close();
+    }
     
     public ManageFruitShop() {
         listFruit = new ArrayList();
